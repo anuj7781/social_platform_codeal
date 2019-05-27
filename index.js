@@ -9,8 +9,19 @@ const passport = require('passport');
 const passportLocal = require('./config/passport-local-strategy');
 //setup mongostore
 const MongoStore = require('connect-mongo')(session);//requires session argument because you need to store the session information in the database
+const sassMiddleware = require('node-sass-middleware');
+
+
+app.use(sassMiddleware({
+    src:'./assets/scss',
+    dest:'./assets/css',
+    debug:true,
+    outputStyle:'extended',
+    prefix:'/css'
+}))
 
 app.use(express.urlencoded());
+
 
 
 app.use(express.static('./assets'));

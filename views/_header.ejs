@@ -1,24 +1,38 @@
 <header>
-    Page Header
-    <ul>
-        <!-- we are using it so that we don't have to handle error that user variable not found  -->
-        <!-- locals.user and user are the same thing because the property can be nil but the variable can't just be absent -->
-        <% if (locals.user){ %>
-            <li>
-                <a href="/users/profile">
-                    <%= user.name %>
-                </a>
-            </li>
-            <li>
-                <a href="/users/sign-out">Sign-Out</a>
-            </li>
-        <%} else {%>
-            <li>
-                <a href="/users/sign-in">Sign-In</a>
-            </li>
-            <li>
-                <a href="/users/sign-up">Sign-Up</a>
-            </li>
-        <% } %>
-    </ul>
+    <div id="contain">
+        <div id="heading">
+            Codeal
+        </div>
+        <div id="side-links">
+            <ul id="contain-list">
+                <!-- we are using it so that we don't have to handle error that user variable not found  -->
+                <!-- locals.user and user are the same thing because the property can be nil but the variable can't just be absent -->
+                <% if (locals.user){ %>
+                <div>
+                <li class="content1">
+                    <a href="/users/profile">
+                        <%= user.name %>
+                    </a>
+                </li>
+                </div>
+                <div>
+                <li class="content2">
+                    <a href="/users/sign-out">Sign-Out</a>
+                </li>
+                </div>
+                <%} else {%>
+                <div>
+                <li class="content1">
+                    <a href="/users/sign-in">Sign-In</a>
+                </li>
+                </div>
+                <div>
+                <li class="content2">
+                    <a href="/users/sign-up">Sign-Up</a>
+                </li>
+                </div>
+                <% } %>
+            </ul>
+        </div>
+    </div>
 </header>
