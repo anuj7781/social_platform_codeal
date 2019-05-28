@@ -9,25 +9,25 @@
                 <!-- locals.user and user are the same thing because the property can be nil but the variable can't just be absent -->
                 <% if (locals.user){ %>
                 <div>
-                <li class="content1">
+                <li class="content">
                     <a href="/users/profile">
                         <%= user.name %>
                     </a>
                 </li>
                 </div>
                 <div>
-                <li class="content2">
+                <li class="content">
                     <a href="/users/sign-out">Sign-Out</a>
                 </li>
                 </div>
                 <%} else {%>
                 <div>
-                <li class="content1">
+                <li class="content">
                     <a href="/users/sign-in">Sign-In</a>
                 </li>
                 </div>
                 <div>
-                <li class="content2">
+                <li class="content">
                     <a href="/users/sign-up">Sign-Up</a>
                 </li>
                 </div>

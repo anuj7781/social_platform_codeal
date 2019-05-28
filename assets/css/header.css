@@ -13,14 +13,14 @@
 #side-links {
   width: 10%; }
 
-ul {
+#contain-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
   display: flex;
   justify-content: space-between; }
 
-li {
+.content {
   display: inline-flex; }
 
 a {
