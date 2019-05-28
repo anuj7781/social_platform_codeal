@@ -4,10 +4,15 @@
 
 <section id="feed-posts">
     <h4>Posts</h4>
+    <!-- first level of check display the form only to the users  which have signed in -->
+    <!-- i will not use if(user) as it will throw an error if user is undefined  -->
+    <%if(locals.user){%><!--here we are checking whether the key is present or not-->
+    <!-- a second level of check needs to be put at controller level in case user tries to fiddle with my website by creating a form by editing html(inspect element) -->
     <form action="/post/create" id="new-posts-form" method="POST">
     <textarea name="content" cols="30" rows="3" placeholder="Type Here..."></textarea>
     <input type="submit" value="Post">
     </form>
+    <%}%>
     <div id="posts-list-container">
         <ul>
             <% for (post of posts) { %>
